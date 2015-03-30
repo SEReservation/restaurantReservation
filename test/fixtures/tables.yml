@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_seats: 1
+  restaurant_id: 1
+  x_loc: 1.5
+  y_loc: 1.5
+  available: false
+
+two:
+  num_seats: 1
+  restaurant_id: 1
+  x_loc: 1.5
+  y_loc: 1.5
+  available: false

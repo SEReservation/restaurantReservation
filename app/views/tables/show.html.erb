@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num seats:</strong>
+  <%= @table.num_seats %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @table.restaurant_id %>
+</p>
+
+<p>
+  <strong>X loc:</strong>
+  <%= @table.x_loc %>
+</p>
+
+<p>
+  <strong>Y loc:</strong>
+  <%= @table.y_loc %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @table.available %>
+</p>
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>
