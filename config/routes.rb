@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-
-
+  get "static_pages/createrestaurant"=>'static_pages#createrestaurant'
+  post "tables/create"=>'tables#create'
+  get "tables/index" =>'tables#index'
+  
   resources :tables
 
   resources :restaurants

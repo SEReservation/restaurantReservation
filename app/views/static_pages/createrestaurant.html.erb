@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable { width: 90px; height:90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 900px; height: 500px; padding: 0.5em; float: left; margin: 10px; background-color: #805F15 }
+  #set {clear:both; float: left; width: 90px; height:90px; padding: 0.5em; margin: 10px 10px 10px 0; width:90px; height:90px;}
+  #setmember { width: 90px; height:90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  </style>
+  <script>
+
+  $(function() {
+
+    $( "#draggable" ).draggable({});
+
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        var stoppos = $(this).position();
+        var x = parseFloat(ui.offset.left - $(this).offset().left);
+        var y = parseFloat(ui.offset.top - $(this).offset().top);
+
+        $.ajax({
+          type:"POST",
+          url:"/tables/create",
+          data: {num_seats: 5, restaurant_id: 1, x_loc: x, y_loc: y, available: true},
+          datatype: 'script',
+          complete:function(){},
+
+          error:function(){alert("Did not save table location")}
+
+
+        })
+
+
+      }
+    });
+    $( "#set div" ).draggable({ stack: "#set div"});
+  });
+
+  </script>
+</head>
+<body>
+
+  <a href="/tables/index">Check all tables</a>
+<div id="set">
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+</div>
+<div id="droppable" class="ui-widget-header">
+  <p>I am a restaurant, make me look better too!</p>
+
+</div>
+
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 class TablesController < ApplicationController
   before_action :set_table, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter  :verify_authenticity_token
   # GET /tables
   # GET /tables.json
   def index
@@ -30,9 +30,11 @@ class TablesController < ApplicationController
       if @table.save
         format.html { redirect_to @table, notice: 'Table was successfully created.' }
         format.json { render :show, status: :created, location: @table }
+        format.js {render :json => @table}
       else
         format.html { render :new }
         format.json { render json: @table.errors, status: :unprocessable_entity }
+        format.js {render :json =>@table.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -69,6 +71,6 @@ class TablesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def table_params
-      params.require(:table).permit(:num_seats, :restaurant_id, :x_loc, :y_loc, :available)
+      params.permit(:num_seats, :restaurant_id, :x_loc, :y_loc, :available)
     end
 end
