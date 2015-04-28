@@ -3,4 +3,7 @@ class StaticPagesController < ApplicationController
   end
   def createrestaurant
   end
+  def viewrestaurant
+  end
+
 end

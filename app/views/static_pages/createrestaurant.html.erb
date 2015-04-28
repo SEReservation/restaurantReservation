@@ -8,10 +8,30 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
   <style>
-  #draggable { width: 90px; height:90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-  #droppable { width: 900px; height: 500px; padding: 0.5em; float: left; margin: 10px; background-color: #805F15 }
+  #draggable { width: 90px; height:90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;}
+  #droppable {width: 900px; height: 500px;  float: left; margin: 10px; background-color: #805F15 }
   #set {clear:both; float: left; width: 90px; height:90px; padding: 0.5em; margin: 10px 10px 10px 0; width:90px; height:90px;}
-  #setmember { width: 90px; height:90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #setmember { width: 90px; height:90px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;
+  background-color: brown; color: brown;
+}
+#pic{
+  width: 100%;
+  height: 100%;
+
+}
+#floorpic{
+  width:100%;
+  height:100%;
+}
+#pic img{
+  height: 100%;
+  width: 100%
+  position: fixed;
+
+  margin: 0 auto;
+}
+
+
   </style>
   <script>
 
@@ -48,42 +68,33 @@
 <body>
 
   <a href="/tables/index">Check all tables</a>
-<div id="set">
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
-  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><p>I am a table, make me look better!</p></div>
+  <a href="/static_pages/viewrestaurant">Check restaurant</a>
+<div id="set" >
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+  <div id="setmember" class="ui-widget-content" style="position: absolute; left:10px; top: 200px;" ><img id = pic src="<%=asset_path( 'overheadtable.jpg')%>"></div>
+
+
 </div>
 <div id="droppable" class="ui-widget-header">
-  <p>I am a restaurant, make me look better too!</p>
+  <img id="floorpic" src="<%=asset_path('floor.jpg')%>"/>
 
 </div>
 

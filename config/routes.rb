@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   get "static_pages/createrestaurant"=>'static_pages#createrestaurant'
   post "tables/create"=>'tables#create'
   get "tables/index" =>'tables#index'
+<<<<<<< HEAD
   get 'signup' => 'users#new' 
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+=======
+  get "static_pages/viewrestaurant"=>'static_pages#viewrestaurant'
+>>>>>>> 6e6d78f0c8a0a71327a9c9a4f0a2944b75e798d7
 
   resources :tables
 
