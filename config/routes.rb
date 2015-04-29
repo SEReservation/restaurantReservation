@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :reservations
+
   get 'sessions/new'
+
 
   get 'users/new'
 
@@ -7,11 +11,13 @@ Rails.application.routes.draw do
   get "static_pages/createrestaurant"=>'static_pages#createrestaurant'
   post "tables/create"=>'tables#create'
   get "tables/index" =>'tables#index'
-  get 'signup' => 'users#new' 
+
+  get 'signup' => 'users#new'
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get "static_pages/viewrestaurant"=>'static_pages#viewrestaurant'
+
 
   resources :tables
 

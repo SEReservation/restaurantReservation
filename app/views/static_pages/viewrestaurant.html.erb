@@ -15,15 +15,28 @@
 
 </head>
 <body>
+
 <% Table.all.each do |table| %>
 
 
-<img id = "pic" style = "margin-left: 40%; margin-top: 10%; position: absolute; padding: 1em;  left:<%=table.x_loc%>px; top:<%=table.y_loc%>px; height = 10%;" src="<%=asset_path( 'overheadtable.jpg')%>"/>
+<img id = "pic" style = "margin-left: 37%; margin-top: 13%; position: absolute; padding: 1em;  left:<%=table.x_loc%>px; top:<%=table.y_loc%>px; height = 10%;" src="<%=asset_path( 'overheadtable.jpg')%>"/>
 
+<div id="tablenum" style= "margin-left: 37%; margin-top: 13%; position: absolute; padding: 1em;  left:<%=table.x_loc%>px; top:<%=table.y_loc%>px; height = 10%;">
+<script>
+document.write(<%=table.id%>);
+</script>
+</div>
 <%end%>
 <img style="position: static; margin-left: 30%; margin-top: 10%; width:900px; height: 500px" src="<%=asset_path('floor.jpg')%>"/>
 
+<%= form_for Reservation.new  do |f| %>
+Please Enter your name<br />
+<%= f.text_field :name %><br />
+Please select a table<br />
+<%= f.number_field :tableid%><br />
+<%=select_tag(:time, options_for_select([['9:00am to 10:00 am', 1], ['10:00 am to 11:00 am', 2]], :selected=> :time))%><br />
+<%= submit_tag "Reserve your time"%>
 
-
+<% end %>
 
 </body>

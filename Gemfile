@@ -3,9 +3,22 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+# <<<<<<< HEAD
 # gem 'bcrypt', '3.1.7'
+# =======
+
+
+
+# >>>>>>> 495d6bbe2529746d5e56196aa31aabd27fbbf60c
+
+#gem 'bcrypt', '3.1.7'
+
+
+gem 'bcrypt', '3.1.10'
+gem 'bcrypt-ruby'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
 
 
 # Use SCSS for stylesheets
@@ -50,7 +63,8 @@ group :development, :test do
   gem 'spring'
 end
 group :production do
+#  gem 'sqlite3'
   gem 'pg',           '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma',           '2.11.1'
+  #gem 'puma',           '2.11.1'
 end
