@@ -34,7 +34,7 @@ Please Enter your name<br />
 <%= f.text_field :name %><br />
 Please select a table<br />
 <%= f.number_field :tableid%><br />
-<%=select_tag(:time, options_for_select([['9:00am to 10:00 am', 1], ['10:00 am to 11:00 am', 2]['11:00 am to 12:00 pm', 3]['12:00pm to 1:00 pm',4]['1:00pm to 2:00 pm',5]['2:00pm to 3:00 pm',6]['3:00pm to 4:00 pm',7]['4:00pm to 5:00 pm', 8]['5:00pm to 6:00 pm',9]['6:00pm to 7:00 pm',10]['7:00pm to 8:00 pm',11]['8:00pm to 9:00 pm',12]], :selected=> :time))%><br />
+<%=select_tag(:time, options_for_select([['9:00am to 10:00 am', 1], ['10:00 am to 11:00 am', 2]], :selected=> :time))%><br />
 <%= submit_tag "Reserve your time"%>
 
 <% end %>

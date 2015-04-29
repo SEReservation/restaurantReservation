@@ -16,11 +16,7 @@ Rails.application.routes.draw do
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-
   get "static_pages/viewrestaurant"=>'static_pages#viewrestaurant'
-
-  post "reservations/create" =>'reservations#create'
-
 
 
   resources :tables

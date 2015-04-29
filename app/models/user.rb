@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :remember_token
   validates :name, presence: true
   validates :email, presence: true
-#  validates :role, presence: true
+  validates :role, presence: true
 
   has_secure_password
   validates :password, length: { minimum: 6 }

@@ -11,19 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150428055358) do
-
-  create_table "logins", force: :cascade do |t|
-    t.string   "user"
-    t.string   "pass"
-    t.string   "type_user"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-=======
-ActiveRecord::Schema.define(version: 20150428042717) do
->>>>>>> dbea1946f855c7f4a62bdc5e8a2ecf7e99e5cb4a
 
   create_table "reservations", force: :cascade do |t|
     t.string   "name"
