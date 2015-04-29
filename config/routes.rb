@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reservations
+
   get 'users/new'
 
   root 'static_pages#home'
@@ -6,6 +8,7 @@ Rails.application.routes.draw do
   post "tables/create"=>'tables#create'
   get "tables/index" =>'tables#index'
   get "static_pages/viewrestaurant"=>'static_pages#viewrestaurant'
+  post "reservations/create" =>'reservations#create'
 
   resources :tables
 
